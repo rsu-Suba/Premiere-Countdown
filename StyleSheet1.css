@@ -1,0 +1,39 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.MainClock {
+    font-size: 90px;
+    font-family: 'Cabin', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.vid {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+}
+
+.updateversion {
+    color: #333333;
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    font-size: 30px;
+    font-family: 'Cabin', sans-serif;
+}
