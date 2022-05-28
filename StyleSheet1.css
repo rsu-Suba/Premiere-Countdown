@@ -15,17 +15,33 @@
     margin: auto;
 }
 
-.vid{
-    position: relative;
-    width: 85%;
-    height: 85%;
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: static;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
-.realtime{
+.vid{
+    position: relative;
+    width: 90%;
+    height: 90%;
+}
+
+.realtime {
     color: #ffffff;
     font-family: Cabin, sans-serif;
-    font-size: 9vh;
+    font-size: 9.5vmin;
     position: absolute;
+    margin: auto;
 }
 
 .version {
