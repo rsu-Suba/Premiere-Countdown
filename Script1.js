@@ -11,6 +11,6 @@ function showClock() {
     var nowMin = set(nowTime.getMinutes());
     var nowSec = set(nowTime.getSeconds());
     var msg = nowHour + ":" + nowMin + ":" + nowSec;
-    document.getElementById("RealtimeClockArea").innerHTML = msg;
+    document.getElementById("realtime").innerHTML = msg;
 }
 setInterval("showClock()", 500);

@@ -2,17 +2,18 @@
 
 <html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Youtube Clock</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#ff0000">
     <link rel="stylesheet" href="StyleSheet1.css">
 </head>
 <body>
-    <div class="container">
+    <div class="canvas">
         <video autoplay muted playsinline loop src="CountdownWhite.mp4" class="vid"></video>
-        <div class="clock">
-            <p id="RealtimeClockArea" class="MainClock">Preparing</p>
-        </div>
-        <p class="updateversion">Only clock 5/28/2022</p>
+        <p id="realtime" class="realtime">Preparing</p>
+        <p class="version">Only Clock deb 5/28/2022</p>
     </div>
     <script type="text/javascript" src="./Script1.js"></script>
 </body>
