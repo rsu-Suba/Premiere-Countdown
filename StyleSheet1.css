@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
+﻿﻿@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
 
 .canvas {
     width: 100%;
@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: static;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -30,10 +30,10 @@
     margin: auto;
 }
 
-.vid{
-    position: relative;
-    width: 90%;
-    height: 90%;
+.vid {
+    position: static;
+    width: 90vmin;
+    height: 90vmin;
 }
 
 .realtime {
@@ -47,8 +47,68 @@
 .version {
     color: #464646;
     font-family: Cabin, sans-serif;
-    font-size: 30px;
-    position: fixed;
+    font-size: 3vmin;
+    text-align: center;
+    position: relative;
     bottom: 0;
     margin: auto;
+}
+
+body {
+    color: #000;
+    background-color: #fff;
+    transition-property: color, background-color;
+}
+
+.dark {
+    display: none;
+}
+
+.light {
+    display: block;
+}
+
+/* for light mode */
+.js-mode-dark {
+    color: #AAAE8D;
+    background-color: #252525;
+}
+
+    .js-mode-dark .light {
+        display: block;
+    }
+
+
+    .js-mode-dark .dark {
+        display: none;
+    }
+
+/* for checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+.switch {
+    position: relative;
+}
+
+.switch-label {
+    cursor: pointer;
+    position: absolute;
+    margin: auto;
+}
+
+.switch-mode {
+    position: fixed;
+    top: 3vmin;
+    right: 3vmin;
+    margin: auto;
+    display: block;
+    transform: rotate(0);
+    transition: 1s;
+}
+
+.buttonimg {
+    width: 10vmin;
+    height: 10vmin;
 }
