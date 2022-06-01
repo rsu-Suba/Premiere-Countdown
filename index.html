@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta name="theme-color" content="#96eeff">
-    <link rel="stylesheet" href="StyleSheet1.css">
+    <link rel="stylesheet" href="Main.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBH5KY146C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,21 +17,44 @@
     </script>
 </head>
 <body>
-    <div class="canvas">
-        <div class="main">
-            <video src="CountdownWhite.mp4" class="vid" id="vid" loop autoplay muted playsinline></video>
-            <p id="realtime" class="realtime">Preparing</p>
+    <div class="main">
+        <video src="CountdownWhite.mp4" class="vid" id="vid" loop autoplay muted playsinline></video>
+        <p id="realtime" class="realtime">Preparing</p>
+    </div>
+    <div class="settings-button">
+        <div class="vis-box">
+
         </div>
-        <p class="version" id="version">Sp Darktheme deb 5/30/2022</p>
-        <div class="switch">
-            <label class="switch-label">
-                <input type="checkbox" id="js_mode_toggle">
-                <span class="switch-mode" id="js_rotate">
-                    <img src="Dark mode Icon.png" class="buttonimg"/>
-                </span>
-            </label>
+        <label for="set-text">Pre<br />Settings<br />Button</label>
+        <input type="checkbox" id="set-text" />
+        <div class="hidden_box">
+            <div class="settings">
+                <div class="switch">
+                    <div class="dark-switch">
+                        <div class="d-switch">
+                            <label class="switch-label">
+                                <input type="checkbox" id="dark_mode_toggle">
+                                <span class="dark-mode" id="dark_rotate">
+                                    <img src="Dark mode Icon.png" class="buttonimg" />
+                                </span>
+                            </label>
+                        </div>
+                        <p class="dark-text">Dark Theme</p>
+                    </div>
+                    <div class="stop-switch">
+                        <img src="Stopwatch Icon.png" class="Stop-img" />
+                        <p class="dark-text">Stopwatch</p>
+                    </div>
+                    <div class="timer-switch">
+                        <img src="Timer Icon.png" class="Timer-img" />
+                        <p class="dark-text">Timer</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="./Script1.js"></script>
+    <p class="version" id="version">Add Settings Panel dev 6/2/2022</p>
+    <script type="text/javascript" src="./Main.js"></script>
+    <script type="text/javascript" src="./Dark.js"></script>
 </body>
-</html>
+</html> 
