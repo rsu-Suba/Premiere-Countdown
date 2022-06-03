@@ -38,7 +38,7 @@
 .version {
     color: #464646;
     font-family: Cabin, sans-serif;
-    font-size: 3vmin;
+    font-size: 4vmin;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -90,6 +90,7 @@
         .switch div img {
             height: 10vh;
             width: 10vh;
+            cursor: pointer;
         }
 
         .switch div p {
@@ -101,6 +102,14 @@
             white-space: nowrap;
             user-select: none;
         }
+
+    .settings-button {
+        position: fixed;
+        top: 2%;
+        right: 1%;
+        width: 17vmin;
+        height: 17vmin;
+    }
 }
 
 @media screen and (orientation: portrait){
@@ -117,6 +126,7 @@
         .switch div img {
             height: 12vw;
             width: 12vw;
+            cursor: pointer;
         }
 
         .switch div p {
@@ -128,37 +138,33 @@
             margin: auto;
             user-select: none;
         }
-}
 
-.settings-button {
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    height: 10vmin;
-    width: 10vmin;
-    background-color: #F7823F;
-    align-items: center;
-    text-align: center;
-    user-select: none;
-}
-
-    .settings-button label {
-        font-family: Cabin, sans-serif;
-        color: #FFF;
-        cursor: pointer;
-        user-select: none;
+    .settings-button {
+        position: fixed;
+        top: 1%;
+        right:2%;
+        width: 15vmin;
+        height: 15vmin;
     }
+}
+
+.hidden_box{
+    position: fixed;
+}
+
+.settings-button img {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
 
 .settings-button input {
     display: none;
-}
-
-.settings-button .hidden_box {
-    visibility: hidden;
-}
-
-.settings-button input:checked ~ .hidden_box {
-    visibility: visible;
 }
 
 .dark {
@@ -187,8 +193,4 @@
 /* for checkbox */
 input[type="checkbox"] {
     display: none;
-}
-
-
-.dark-mode {
 }
