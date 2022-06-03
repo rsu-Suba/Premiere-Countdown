@@ -3,6 +3,13 @@
     color: #000;
     background-color: #fff;
     transition-property: color, background-color;
+    margin: 0;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none; 
+}
+
+.body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
 }
 
 .main {
@@ -143,8 +150,8 @@
         position: fixed;
         top: 1%;
         right:2%;
-        width: 7vmin;
-        height: 7vmin;
+        width: 9vmin;
+        height: 9vmin;
     }
 }
 
