@@ -16,7 +16,7 @@ if (isDark) {
 }
 */
 
-// ƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚Å‚ÌØ‚è‘Ö‚¦A‘I‘ğ‚ğƒ[ƒJƒ‹ƒXƒgƒŒ[ƒW‚É•Û‘¶
+// ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½Xï¿½Å‚ÌØ‚ï¿½Ö‚ï¿½ï¿½Aï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Jï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½[ï¿½Wï¿½É•Û‘ï¿½
 checkToggle.addEventListener('change', function (e) {
     rotateInfinite();
     if (e.target.checked) {
@@ -27,8 +27,8 @@ checkToggle.addEventListener('change', function (e) {
 });
 
 /**
- * ƒ_[ƒNorƒ‰ƒCƒgƒe[ƒ}Ø‚è‘Ö‚¦
- * @param {String} mode 'light' ‚à‚µ‚­‚Í 'dark'
+ * ï¿½_ï¿½[ï¿½Norï¿½ï¿½ï¿½Cï¿½gï¿½eï¿½[ï¿½}ï¿½Ø‚ï¿½Ö‚ï¿½
+ * @param {String} mode 'light' ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 'dark'
  */
 
 function changeMode(mode) {
@@ -36,18 +36,18 @@ function changeMode(mode) {
     if (mode === 'dark') {
         document.body.classList.add(classDark);
         checkToggle.checked = true;
-        tag.src = "CountdownBlack.mp4";
+        tag.src = "./CountdownBlack.mp4";
     } else if (mode === 'light') {
         document.body.classList.remove(classDark);
         checkToggle.checked = false;
-        tag.src = "CountdownWhite.mp4";
+        tag.src = "./CountdownWhite.mp4";
     }
     changecolortext('version');
 }
 
 /**
- * Œ‚Æ‘¾—zƒAƒCƒRƒ“–³ŒÀ‰ñ“]
- * ŒÄ‚Î‚ê‚é‚½‚Ñ‚É180“xŠp“x‚ª’Ç‰Á‚³‚ê‚Ä‚¢‚­
+ * ï¿½ï¿½ï¿½Æ‘ï¿½ï¿½zï¿½Aï¿½Cï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]
+ * ï¿½Ä‚Î‚ï¿½é‚½ï¿½Ñ‚ï¿½180ï¿½xï¿½pï¿½xï¿½ï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
  */
 function rotateInfinite() {
     nowRotate += 360;
