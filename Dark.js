@@ -36,11 +36,11 @@ function changeMode(mode) {
     if (mode === 'dark') {
         document.body.classList.add(classDark);
         checkToggle.checked = true;
-        tag.src = "./CountdownBlack.mp4";
+        tag.src = "Datafile/CountdownBlack.mp4";
     } else if (mode === 'light') {
         document.body.classList.remove(classDark);
         checkToggle.checked = false;
-        tag.src = "./CountdownWhite.mp4";
+        tag.src = "Datafile/CountdownWhite.mp4";
     }
     changecolortext('version');
 }
