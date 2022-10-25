@@ -29,14 +29,14 @@
 
 .vid {
     position: absolute;
-    width: 90vmin;
-    height: 90vmin;
+    width: 70vmin;
+    height: 70vmin;
 }
 
 .realtime {
     color: #ffffff;
     font-family: Cabin, sans-serif;
-    font-size: 9.5vmin;
+    font-size: 7vmin;
     position: absolute;
     margin: auto;
     user-select: none;
@@ -45,7 +45,7 @@
 .version {
     color: #464646;
     font-family: Cabin, sans-serif;
-    font-size: 4vmin;
+    font-size: 2vmin;
     text-align: center;
     position: fixed;
     bottom: 0;
