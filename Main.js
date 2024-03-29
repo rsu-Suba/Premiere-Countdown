@@ -82,6 +82,7 @@ function darkmode() {
       document.body.style.setProperty("--sub-border-color", "#666");
       document.body.style.setProperty("--laps-bg-color","rgba(10, 10, 10, 0.8)");
       document.getElementById("dark-mode-button").lastElementChild.innerHTML = `Light Mode`;
+      document.getElementById("dark-text").innerHTML = `light_mode`;
       isDarkmode = 1;
    } else if (isDarkmode == 1) {
       document.body.style.backgroundColor = "#fff";
@@ -92,6 +93,7 @@ function darkmode() {
       document.body.style.setProperty("--sub-border-color", "#999");
       document.body.style.setProperty("--laps-bg-color","rgba(230, 230, 230, 0.8)");
       document.getElementById("dark-mode-button").lastElementChild.innerHTML = `Dark Mode`;
+      document.getElementById("dark-text").innerHTML = `dark_mode`;
       isDarkmode = 0;
    }
    setting_mode();

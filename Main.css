@@ -29,7 +29,8 @@ body {
 }
 
 text,
-p {
+p,
+button {
    font-family: "Inter", sans-serif !important;
 }
 
@@ -114,9 +115,8 @@ p {
 .setting-img .material-symbols-rounded {
    color: var(--sub-border-color);
    position: relative;
-   aspect-ratio: 1;
-   font-size: 4vh !important;
-   margin: 30%;
+   font-size: 2vh !important;
+   height: auto;
 }
 
 .setting-button {
@@ -149,6 +149,7 @@ p {
 .menu-img {
    background-color: var(--main-bg-color);
    border: solid 2px var(--main-border-color);
+   box-shadow: var(--main-boxShadow);
    position: relative;
    height: 100%;
    aspect-ratio: 1;
@@ -157,14 +158,14 @@ p {
    text-align: center;
    justify-content: center;
    align-items: center;
-   padding: 15%;
+   padding: 8%;
 }
 
 .material-symbols-rounded {
    font-family: "Material Symbols Rounded" !important;
    color: var(--main-border-color);
    position: relative;
-   height: 100%;
+   height: auto;
    aspect-ratio: 1;
    font-size: 1000% !important;
    margin: auto;
