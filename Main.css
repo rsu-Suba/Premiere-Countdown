@@ -16,16 +16,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0.8vmin;
-  }
-  ::-webkit-scrollbar-track {
-    background: #9c9c9c;
-    border-radius: 9999px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #a17af3;
-    border-radius: 9999px;
-  }
+   width: 0.8vmin;
+}
+::-webkit-scrollbar-track {
+   background: #9c9c9c;
+   border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+   background: #a17af3;
+   border-radius: 9999px;
+}
 
 text,
 p {
@@ -39,12 +39,12 @@ p {
 
 .main {
    width: 100%;
-   height: 100vh;
+   height: 100%;
    display: flex;
    align-items: center;
    justify-content: center;
    text-align: center;
-   position: relative;
+   position: absolute;
    top: 0;
    right: 0;
    bottom: 0;
@@ -53,20 +53,20 @@ p {
 }
 
 .realtime {
-    color: #ffffff;
-    font-family: Cabin, sans-serif !important;
-    position: absolute;
-    margin: auto;
-    user-select: none;
- }
+   color: #ffffff;
+   font-family: Cabin, sans-serif !important;
+   position: absolute;
+   margin: auto;
+   user-select: none;
+}
 
- .settings-button {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 8vh;
-    aspect-ratio: 1;
- }
+.settings-button {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 8vh;
+   aspect-ratio: 1;
+}
 
 .setting {
    background-color: var(--main-bg-color);
@@ -138,9 +138,9 @@ p {
 }
 
 .menu-button {
-    position: absolute;
-    height: 60%;
-    aspect-ratio: 1;
+   position: absolute;
+   height: 60%;
+   aspect-ratio: 1;
    border: none;
    background-color: rgba(0, 0, 0, 0);
 }
@@ -169,230 +169,229 @@ p {
 }
 
 .menu-text {
-    position: relative;
-    bottom: 1.5vh;
-    color: var(--main-text-color);
- }
+   position: relative;
+   bottom: 1.5vh;
+   color: var(--main-text-color);
+}
 
- .stopwatch-panel,
- .timer-panel {
-    position: fixed;
-    border-radius: 4vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    transition: 0.3s cubic-bezier(0.34, 1.8, 0.64, 1);
- }
+.stopwatch-panel,
+.timer-panel {
+   position: fixed;
+   border-radius: 4vh;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: space-between;
+   transition: 0.3s cubic-bezier(0.34, 1.8, 0.64, 1);
+}
 
- .panel-button-div,
- .panel-button-div-centre {
-    position: relative;
-    aspect-ratio: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
- }
+.panel-button-div,
+.panel-button-div-centre {
+   position: relative;
+   aspect-ratio: 1;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
 
- .panel-button,
- .panel-button-centre {
-    position: absolute;
-    height: 80%;
-    aspect-ratio: 1;
-    bottom: 0;
-    border: none;
-    border-radius: 9999px;
-    background-color: rgba(0, 0, 0, 0);
- }
+.panel-button,
+.panel-button-centre {
+   position: absolute;
+   height: 80%;
+   aspect-ratio: 1;
+   bottom: 0;
+   border: none;
+   border-radius: 9999px;
+   background-color: rgba(0, 0, 0, 0);
+}
 
- .panel-button-div p,
- .panel-button-div-centre p {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
- }
+.panel-button-div p,
+.panel-button-div-centre p {
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
 
- #stopwatch-left-button,
- #timer-left-button {
-    background-color: #808080;
-    transition: 0.3s cubic-bezier(0.34, 1.8, 0.64, 1);
- }
+#stopwatch-left-button,
+#timer-left-button {
+   background-color: #808080;
+   transition: 0.3s cubic-bezier(0.34, 1.8, 0.64, 1);
+}
 
- #stopwatch-left-text,
- #timer-left-text {
-    color: #eee;
- }
+#stopwatch-left-text,
+#timer-left-text {
+   color: #eee;
+}
 
- #stopwatch-right-button,
- #timer-right-button {
-    background: rgb(112, 112, 228);
-    background: linear-gradient(
-       135deg,
-       rgba(112, 112, 228, 1) 4%,
-       rgba(164, 123, 244, 1) 34%,
-       rgba(200, 130, 255, 1) 100%
-    );
-    transition: 0.2s;
- }
+#stopwatch-right-button,
+#timer-right-button {
+   background: rgb(112, 112, 228);
+   background: linear-gradient(
+      135deg,
+      rgba(112, 112, 228, 1) 4%,
+      rgba(164, 123, 244, 1) 34%,
+      rgba(200, 130, 255, 1) 100%
+   );
+   transition: 0.2s;
+}
 
- #stopwatch-right-text,
- #timer-right-text {
-    color: #582c9e;
-    transition: 0.2s;
- }
+#stopwatch-right-text,
+#timer-right-text {
+   color: #582c9e;
+   transition: 0.2s;
+}
 
- #timer-centre-button {
-    background: linear-gradient(
-       135deg,
-       rgba(112, 112, 228, 1) 4%,
-       rgba(164, 123, 244, 1) 34%,
-       rgba(200, 130, 255, 1) 100%
-    );
-    width: 80%;
-    height: 100%;
- }
+#timer-centre-button {
+   background: linear-gradient(
+      135deg,
+      rgba(112, 112, 228, 1) 4%,
+      rgba(164, 123, 244, 1) 34%,
+      rgba(200, 130, 255, 1) 100%
+   );
+   width: 80%;
+   height: 100%;
+}
 
- .stopwatch-lap {
-    pointer-events: none;
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    margin: 0 auto;
-    align-items: center;
-    border-radius: 0 0 2.5vh 2.5vh;
-    border: solid 2px #999;
-    border-top: none;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    transition: 0.3s;
- }
+.stopwatch-lap {
+   pointer-events: none;
+   position: fixed;
+   opacity: 0;
+   top: 0;
+   margin: 0 auto;
+   align-items: center;
+   border-radius: 0 0 2.5vh 2.5vh;
+   border: solid 2px #999;
+   border-top: none;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+   overflow-y: auto;
+   transition: 0.3s;
+}
 
- .stopwatch-lap > :first-child {
-    margin-top: auto !important;
- }
+.stopwatch-lap > :first-child {
+   margin-top: auto !important;
+}
 
- .laps {
-    background-color: var(--laps-bg-color);
-    color: var(--main-text-color);
-    width: 98%;
-    min-height: 7%;
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0%;
-    margin: 1%;
-    border-radius: 1vh;
-    border-left: solid 4px var(--sub-border-color);
-    border-right: solid 4px var(--sub-border-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.5s cubic-bezier(0.77, -1.28, 0.57, 1.07);
- }
+.laps {
+   background-color: var(--laps-bg-color);
+   color: var(--main-text-color);
+   width: 98%;
+   min-height: 7%;
+   position: relative;
+   left: 0;
+   right: 0;
+   bottom: 0%;
+   margin: 1%;
+   border-radius: 1vh;
+   border-left: solid 4px var(--sub-border-color);
+   border-right: solid 4px var(--sub-border-color);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   transition: 0.5s cubic-bezier(0.77, -1.28, 0.57, 1.07);
+}
 
- .laps p {
-    color: var(--main-text-color);
- }
+.laps p {
+   color: var(--main-text-color);
+}
 
- .lap-Num,
- .lap-Time {
-    color: #444;
-    font-size: 2vh;
-    margin: 0 1.5vh;
- }
+.lap-Num,
+.lap-Time {
+   color: #444;
+   font-size: 2vh;
+   margin: 0 1.5vh;
+}
 
- .timer-set {
-    pointer-events: none;
-    filter: blur(20vh);
-    opacity: 0;
-    background-color: var(--main-bg-color);
-    border: solid 2px var(--sub-border-color);
-    backdrop-filter: blur(2vh);
-    -webkit-backdrop-filter: blur(2vh);
-    box-shadow: var(--main-boxShadow);
-    position: fixed;
-    aspect-ratio: 2/3;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
- }
+.timer-set {
+   pointer-events: none;
+   filter: blur(20vh);
+   opacity: 0;
+   background-color: var(--main-bg-color);
+   border: solid 2px var(--sub-border-color);
+   backdrop-filter: blur(2vh);
+   -webkit-backdrop-filter: blur(2vh);
+   box-shadow: var(--main-boxShadow);
+   position: fixed;
+   aspect-ratio: 2/3;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   transition: 0.3s;
+}
 
- .timer-set-close {
-    background-color: rgba(250, 250, 250, 0.1);
-    backdrop-filter: blur(0.1vh);
-    -webkit-backdrop-filter: blur(0.1vh);
-    position: absolute;
-    aspect-ratio: 1;
-    border-radius: 9999px;
-    border: 1px solid #666;
-    margin: 4%;
-    color: var(--main-text-color);
- }
+.timer-set-close {
+   background-color: rgba(250, 250, 250, 0.1);
+   backdrop-filter: blur(0.1vh);
+   -webkit-backdrop-filter: blur(0.1vh);
+   position: absolute;
+   aspect-ratio: 1;
+   border-radius: 9999px;
+   border: 1px solid #666;
+   margin: 4%;
+   color: var(--main-text-color);
+}
 
- .timer-set-text {
-    position: relative;
-    text-align: center;
-    top: 4%;
-    margin-bottom: 0;
-    color: var(--main-text-color);
- }
+.timer-set-text {
+   position: relative;
+   text-align: center;
+   top: 4%;
+   margin-bottom: 0;
+   color: var(--main-text-color);
+}
 
- .timer-set-nums {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 75%;
-    aspect-ratio: 3/4;
- }
+.timer-set-nums {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   position: relative;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   width: 75%;
+   aspect-ratio: 3/4;
+}
 
- .timer-set-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 33%;
- }
+.timer-set-column {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   width: 33%;
+}
 
- .timer-set-num-but {
-    background-color: rgba(250, 250, 250, 0.1);
-    border: 2px solid #666;
-    backdrop-filter: blur(0.1vh);
-    -webkit-backdrop-filter: blur(0.1vh);
-    position: relative;
-    width: 80%;
-    aspect-ratio: 1;
-    border-radius: 9999px;
-    font-size: 3vh;
-    color: var(--main-text-color);
- }
- .progress {
-    position: absolute;
-    margin: auto;
-    aspect-ratio: 1;
-    background-image: conic-gradient(#9c7af2 0% 0%, rgba(0, 0, 0, 0) 0% 100%);
-    border-radius: 9999px;
-    transition: 0.5s;
- }
-
+.timer-set-num-but {
+   background-color: rgba(250, 250, 250, 0.1);
+   border: 2px solid #666;
+   backdrop-filter: blur(0.1vh);
+   -webkit-backdrop-filter: blur(0.1vh);
+   position: relative;
+   width: 80%;
+   aspect-ratio: 1;
+   border-radius: 9999px;
+   font-size: 3vh;
+   color: var(--main-text-color);
+}
+.progress {
+   position: absolute;
+   margin: auto;
+   aspect-ratio: 1;
+   background-image: conic-gradient(#9c7af2 0% 0%, rgba(0, 0, 0, 0) 0% 100%);
+   border-radius: 9999px;
+   transition: 0.5s;
+}
 
 @media screen and (orientation: landscape) {
    .realtime {
@@ -447,8 +446,8 @@ p {
 
    #stopwatch-left-button,
    #timer-left-button {
-    right: -150%;
-    bottom: 0;
+      right: -150%;
+      bottom: 0;
    }
 
    #timer-centre-button {
@@ -502,6 +501,10 @@ p {
       height: 20%;
    }
 
+   .menu-img {
+      height: 70%;
+   }
+
    .menu-text {
       font-size: min(8vw, max(3vh));
    }
@@ -535,8 +538,8 @@ p {
 
    #stopwatch-left-button,
    #timer-left-button {
-    bottom: -150%;
-    right: 0;
+      bottom: -150%;
+      right: 0;
    }
 
    #timer-centre-text {
@@ -544,7 +547,7 @@ p {
    }
 
    .panel-button-div-centre {
-    aspect-ratio: 2.15/1;
+      aspect-ratio: 2.15/1;
       width: 40%;
       bottom: 0;
       transition: 0.3s cubic-bezier(0.58, -1.18, 0.84, 0.82);
