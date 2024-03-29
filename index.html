@@ -1,237 +1,62 @@
 ﻿<!DOCTYPE html>
-<html lang="ja">
-   <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <meta charset="utf-8" />
-      <meta name="viewport" content="maximum-scale=1.0, user-scalable=no" />
-      <title>Youtube Clock</title>
-      <link rel="icon" href="./Datafile/favicon.ico" />
-      <link rel="apple-touch-icon" href="./Datafile/apple-touch-icon.png" />
-      <meta name="theme-color" content="#a17af3" />
-      <link rel="stylesheet" href="Main.css" />
-      <link rel="stylesheet" href="clock.css" />
-      <link
-         rel="stylesheet"
-         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
-      />
-      <script
-         async
-         src="https://www.googletagmanager.com/gtag/js?id=G-ZBH5KY146C"
-      ></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag() {
-            dataLayer.push(arguments);
-         }
-         gtag("js", new Date());
-         gtag("config", "G-ZBH5KY146C");
-      </script>
-   </head>
-   <body onload="init();">
-      <div class="main" id="main">
-         <div class="progress" id="progress"></div>
-         <div class="clock" id="clock">
-            <div class="clock-circle">
-               <div class="top">
-                  <div class="top1"></div>
-                  <div class="top2"></div>
-                  <div class="top3 clock-anim"></div>
-               </div>
-               <div class="colorful clock-anim"></div>
-               <div class="middle">
-                  <div class="middle-wire">
-                     <div class="middle-wire1"></div>
-                     <div class="middle-wire2"></div>
-                     <div class="middle-wire3"></div>
-                  </div>
-               </div>
-               <div class="bottom-stripe">
-                  <div class="stripe">
-                     <div class="stripe1 clock-anim"></div>
-                  </div>
-                  <div class="stripe">
-                     <div class="stripe2 clock-anim"></div>
-                  </div>
-                  <div class="stripe">
-                     <div class="stripe3 clock-anim"></div>
-                  </div>
-                  <div class="stripe">
-                     <div class="stripe4 clock-anim"></div>
-                  </div>
-               </div>
-               <div class="grad">
-                  <div class="clock-anim" style="animation-delay: 0.8s"></div>
-                  <div class="clock-anim" style="animation-delay: 0.6s"></div>
-                  <div class="clock-anim" style="animation-delay: 0.4s"></div>
-                  <div class="clock-anim" style="animation-delay: 0.2s"></div>
-                  <div class="clock-anim" style="animation-delay: 0s"></div>
-               </div>
-               <div class="bottom">
-                  <div class="bottom-left">
-                     <div class="bottom-circle1 clock-anim">
-                        <div class="bottom-circle-top"></div>
-                        <div class="bottom-circle-bottom"></div>
-                     </div>
-                  </div>
-                  <div class="bottom-right clock-anim">
-                     <div class="bottom-circle2 clock-anim">
-                        <div class="bottom-circle-top"></div>
-                        <div class="bottom-circle-bottom"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="wave clock-anim"></div>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Youtube Clock</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#96eeff">
+    <link rel="stylesheet" href="Main.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBH5KY146C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZBH5KY146C');
+    </script>
+</head>
+<body>
+    <div class="main">
+        <video src="Datafile/CountdownWhite.mp4" class="vid" id="vid" loop autoplay muted playsinline></video>
+        <p id="realtime" class="realtime">Preparing</p>
+    </div>
+    <div class="settings-button">
+        <label for="set-text" class="set-label">
+            <input type="checkbox" id="set-text" />
+            <img src="Datafile/Settings-Icon.png" />
+        </label>
+    </div>
+    <div class="hidden_box" id="hidden_box">
+        <div class="settings">
+            <div class="switch">
+                <div class="dark-switch">
+                    <div class="d-switch">
+                        <label class="switch-label">
+                            <input type="checkbox" id="dark_mode_toggle">
+                            <span class="dark-mode" id="dark_rotate">
+                                <img src="Datafile/Dark mode Icon.png" class="buttonimg" />
+                            </span>
+                        </label>
+                    </div>
+                    <p class="dark-text">Dark Theme</p>
+                </div>
+                <div class="stop-switch">
+                    <img src="Datafile/Stopwatch Icon.png" class="Stop-img" />
+                    <p class="dark-text">Stopwatch</p>
+                </div>
+                <div class="timer-switch">
+                    <img src="Datafile/Timer Icon.png" class="Timer-img" />
+                    <p class="dark-text">Timer</p>
+                </div>
             </div>
-            <div class="top-stripe clock-anim">
-               <div class="left-stripe clock-anim"></div>
-               <div class="middle-stripe"></div>
-               <div class="right-stripe clock-anim"></div>
-            </div>
-            <div class="movebar clock-anim"></div>
-         </div>
-         <p id="realtime" class="realtime">Prep...</p>
-      </div>
-      <div class="settings-button" id="settings-button">
-         <div class="setting-img">
-            <span class="material-symbols-rounded"> more_vert </span>
-         </div>
-         <button class="setting-button" onclick="setting_mode();"></button>
-      </div>
-      <div class="stopwatch-lap" id="stopwatch-lap"></div>
-      <div class="stopwatch-panel" id="stopwatch-panel">
-         <div class="panel-button-div">
-            <button
-               class="panel-button"
-               id="stopwatch-left-button"
-               onclick="stopwatch_left();"
-            >
-               <p id="stopwatch-left-text">Lap</p>
-            </button>
-         </div>
-         <div class="panel-button-div">
-            <button
-               class="panel-button"
-               id="stopwatch-right-button"
-               onclick="stopwatch_right();"
-            >
-               <p id="stopwatch-right-text">Start</p>
-            </button>
-         </div>
-      </div>
-      <div class="timer-panel" id="timer-panel">
-         <div class="panel-button-div">
-            <button
-               class="panel-button"
-               id="timer-left-button"
-               onclick="timer_left();"
-            >
-               <p id="timer-left-text">Cancel</p>
-            </button>
-         </div>
-         <div class="panel-button-div-centre" id="panel-button-div-centre">
-            <button
-               class="panel-button-centre"
-               id="timer-centre-button"
-               onclick="timer_centre();"
-            >
-               <p id="timer-centre-text">Set</p>
-            </button>
-         </div>
-         <div class="panel-button-div">
-            <button
-               class="panel-button"
-               id="timer-right-button"
-               onclick="timer_right();"
-            >
-               <p id="timer-right-text">Start</p>
-            </button>
-         </div>
-      </div>
-      <div class="timer-set" id="timer-set">
-         <button
-            class="timer-set-close"
-            id="timer-set-close"
-            onclick="timer_set(10);"
-         >
-            X
-         </button>
-         <p class="timer-set-text" id="timer-set-text">00:00:00</p>
-         <div class="timer-set-nums">
-            <div class="timer-set-column">
-               <button class="timer-set-num-but" onclick="timer_set(1);">
-                  1
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(4);">
-                  4
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(7);">
-                  7
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(12);">
-                  Del
-               </button>
-            </div>
-            <div class="timer-set-column">
-               <button class="timer-set-num-but" onclick="timer_set(2);">
-                  2
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(5);">
-                  5
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(8);">
-                  8
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(0);">
-                  0
-               </button>
-            </div>
-            <div class="timer-set-column">
-               <button class="timer-set-num-but" onclick="timer_set(3);">
-                  3
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(6);">
-                  6
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(9);">
-                  9
-               </button>
-               <button class="timer-set-num-but" onclick="timer_set(11);">
-                  OK
-               </button>
-            </div>
-         </div>
-      </div>
-      <div class="setting" id="setting">
-         <div class="menu-button-div" id="dark-mode-button">
-            <div class="menu-img">
-               <span class="material-symbols-rounded"> dark_mode </span>
-            </div>
-            <button class="menu-button" onclick="darkmode();"></button>
-            <p class="menu-text">Dark Mode</p>
-         </div>
-         <div class="menu-button-div" id="stopwatch-mode-button">
-            <div class="menu-img">
-               <span class="material-symbols-rounded"> hourglass </span>
-            </div>
-            <button class="menu-button" onclick="stop_mode();"></button>
-            <p class="menu-text">Stopwatch</p>
-         </div>
-         <div class="menu-button-div" id="clock-mode-button">
-            <div class="menu-img">
-               <span class="material-symbols-rounded"> schedule </span>
-            </div>
-            <button class="menu-button" onclick="clock_mode();"></button>
-            <p class="menu-text">Clock</p>
-         </div>
-         <div class="menu-button-div" id="timer-mode-button">
-            <div class="menu-img">
-               <span class="material-symbols-rounded"> timer </span>
-            </div>
-            <button class="menu-button" onclick="timer_mode();"></button>
-            <p class="menu-text">Timer</p>
-         </div>
-      </div>
-      <script type="text/javascript" src="./Main.js"></script>
-   </body>
-</html>
+        </div>
+    </div>
+    <p class="version" id="version">Editing Settings Button dev 10/25/2022</p>
+    <script type="text/javascript" src="./Main.js"></script>
+    <script type="text/javascript" src="./Dark.js"></script>
+</body>
+</html> 
