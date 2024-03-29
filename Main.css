@@ -153,8 +153,7 @@ p {
    height: 100%;
    aspect-ratio: 1;
    border-radius: 9999px;
-   box-shadow: var(--main-boxShadow);
-   display: flex;
+   display:flex;
    text-align: center;
    justify-content: center;
    align-items: center;
@@ -342,6 +341,9 @@ p {
    border-radius: 9999px;
    border: 1px solid #666;
    margin: 4%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    color: var(--main-text-color);
 }
 
@@ -385,6 +387,9 @@ p {
    aspect-ratio: 1;
    border-radius: 9999px;
    font-size: 3vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    color: var(--main-text-color);
 }
 .progress {

@@ -81,7 +81,6 @@ function darkmode() {
       document.body.style.setProperty("--main-boxShadow","0 0 5vh rgba(100, 100, 100, 0.6)");
       document.body.style.setProperty("--sub-border-color", "#666");
       document.body.style.setProperty("--laps-bg-color","rgba(10, 10, 10, 0.8)");
-      document.getElementById("dark-mode-button").firstElementChild.firstElementChild.innerHTML = `wb_sunny`;
       document.getElementById("dark-mode-button").lastElementChild.innerHTML = `Light Mode`;
       isDarkmode = 1;
    } else if (isDarkmode == 1) {
@@ -92,7 +91,6 @@ function darkmode() {
       document.body.style.setProperty("--main-boxShadow","0 0 5vh rgba(0, 0, 0, 0.6)");
       document.body.style.setProperty("--sub-border-color", "#999");
       document.body.style.setProperty("--laps-bg-color","rgba(230, 230, 230, 0.8)");
-      document.getElementById("dark-mode-button").firstElementChild.firstElementChild.innerHTML = `dark_mode`;
       document.getElementById("dark-mode-button").lastElementChild.innerHTML = `Dark Mode`;
       isDarkmode = 0;
    }
@@ -136,7 +134,7 @@ function clock_mode() {
 
 function clock_load_time() {
    time_text.innerHTML = 
-   `${String(new Date().getHours()).padStart(2, "0"
+   `${String(new Date().getHours()
    )}:${String(new Date().getMinutes()).padStart(2, "0"
    )}:${String(new Date().getSeconds()).padStart(2, "0")}`;
    clock_timerout = setTimeout(clock_load_time, 500);
